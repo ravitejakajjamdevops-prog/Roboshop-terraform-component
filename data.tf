@@ -36,3 +36,6 @@ data "aws_ssm_parameter" "frontend-alb_listener_arn" {
 data "aws_ssm_parameter" "Private_subnet_ids" {
     name = "/${var.project}/${var.environment}/Private_subnet_ids"
 }
+data "aws_ssm_parameter" "frontend-alb_certficate_arn" {
+    name = "/${var.project}/${var.environment}/frontend-alb_certificate_arn"
+}
