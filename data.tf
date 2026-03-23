@@ -1,4 +1,4 @@
-ata "aws_ami" "RetreiveInstanceID" {
+data "aws_ami" "RetreiveInstanceID" {
 
     most_recent = true
     owners = ["973714476881"]
