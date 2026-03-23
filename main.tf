@@ -97,7 +97,7 @@ resource "aws_autoscaling_group" "main" {
     id      = aws_launch_template.main.id
     version = "$Latest"
   }
-  vpc_zone_identifier       = [local.Private_subnet_id]
+  vpc_zone_identifier       = [local.Private_subnet_ids]
 
   target_group_arns = [aws_lb_target_group.main.arn]
 
