@@ -21,3 +21,7 @@ variable "rule_priority"{
 variable "domain_name" {
     default = "kajjam.online"
 }
+variable "environment"
+{
+    default = "dev"
+}
