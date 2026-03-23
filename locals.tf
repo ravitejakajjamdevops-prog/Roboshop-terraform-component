@@ -12,6 +12,6 @@ locals {
         Project = var.project
         Environment = var.environment
     }
-    frotnend-alb_certificate_arn = data.aws_ssm_parameter.frotnend-alb_certificate_arn.value
+    frontend-alb_certificate_arn = data.aws_ssm_parameter.frotnend-alb_certificate_arn.value
     host_header = var.component == "frontend" ? "${var.component}-${var.environment}.${var.domain_name}" : "${var.component}-${var.environment}.backend-alb.${var.domain_name}"
 }
