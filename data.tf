@@ -36,9 +36,9 @@ data "aws_ssm_parameter" "frontend-alb_listener_arn" {
 data "aws_ssm_parameter" "Private_subnet_ids" {
     name = "/${var.project}/${var.environment}/Private_subnet_ids"
 }
-data "aws_ssm_parameter" "frontend-alb_certficate_arn" {
-    name = "/${var.project}/${var.environment}/frontend-alb_certificate_arn"
-}
 data "aws_ssm_parameter" "vpc_id" {
     name = "/${var.project}/${var.environment}/vpc_id"
+}
+data "aws_ssm_parameter" "frontend-alb_certificate_arn" {
+  name = "/Roboshop/${var.environment}/frontend-alb_certificate_arn"
 }
