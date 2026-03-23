@@ -6,6 +6,7 @@ locals {
     port_number = var.component == "frontend" ? 80 : 8080
     backend-alb_listener_arn = data.aws_ssm_parameter.backend-alb_listener_arn.value
     frontend-alb_listener_arn = data.aws_ssm_parameter.frontend-alb_listener_arn.value
+    vpc_id = data.aws_ssm_parameter.vpc_id.value
     alb_listener_arn = var.component == "frontend" ? local.frontend-alb_listener_arn : local.backend-alb_listener_arn
     common_tags = {
 
