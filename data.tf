@@ -25,7 +25,7 @@ data "aws_ssm_parameter" "public_subnet_id" {
     name = "/${var.project}/${var.environment}/Public_subnet_ids"
 }
 data "aws_ssm_parameter" "sg_id" {
-    name = "/${var.project}/${var.environment}/"${var.component}"_sg_id"
+    name = "/${var.project}/${var.environment}/${var.component}_sg_id"
 }
 data "aws_ssm_parameter" "frontend-alb_listener_arn" {
     name = "/${var.project}/${var.environment}/frontend-alb_listener_arn"
